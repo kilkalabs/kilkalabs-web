@@ -88,7 +88,7 @@ const structuredData = {
     />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#1f2937" />
+    <meta name="theme-color" content="#12273a" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="/images/logo.webp" />
@@ -116,7 +116,14 @@ const structuredData = {
         <nav>
           <a href="/">Home</a>
           <div class="dropdown">
-            <button id="desktop-dropdown-button" class="dropdown-button" aria-haspopup="menu" aria-expanded="false">
+            <button
+              id="desktop-dropdown-button"
+              class="dropdown-button"
+              type="button"
+              aria-haspopup="menu"
+              aria-controls="desktop-dropdown-menu"
+              aria-expanded="false"
+            >
               Our Apps
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -134,7 +141,9 @@ const structuredData = {
         <button
           id="mobile-menu-button"
           class="mobile-menu-button"
+          type="button"
           aria-label="Toggle navigation menu"
+          aria-controls="mobile-menu"
           aria-expanded="false"
         >
           <svg
@@ -151,7 +160,15 @@ const structuredData = {
       <div id="mobile-menu" class="mobile-menu">
         <a href="/">Home</a>
         <div>
-          <button id="mobile-dropdown-button" aria-haspopup="menu" aria-expanded="false">Our Apps</button>
+          <button
+            id="mobile-dropdown-button"
+            type="button"
+            aria-haspopup="menu"
+            aria-controls="mobile-dropdown-menu"
+            aria-expanded="false"
+          >
+            Our Apps
+          </button>
           <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
             <a href="https://inthemood.kilkalabs.com" target="_blank" rel="noreferrer noopener">In The Mood</a>
           </div>
@@ -166,12 +183,13 @@ const structuredData = {
     <main id="main-content">
       <section class="hero" aria-label="Hero section">
         <div class="container">
-          <h1>Building innovative solutions for tomorrow's challenges</h1>
-          <p>
-            KilkaLabs creates cutting-edge mobile applications and UX/UI design services that help businesses and
-            individuals thrive in a digital world.
+          <p class="hero-kicker">Tallinn, Estonia <span aria-hidden="true">/</span> Mobile apps <span aria-hidden="true">/</span> UX/UI</p>
+          <h1>Mobile products with a clear point of view.</h1>
+          <p class="hero-intro">
+            KilkaLabs creates mobile applications and UX/UI design services that help businesses and individuals thrive
+            in a digital world.
           </p>
-          <a href="#contact" class="cta-button" aria-label="Contact KilkaLabs">Get in Touch</a>
+          <a href="#contact" class="cta-button" aria-label="Start a conversation with KilkaLabs">Start a conversation</a>
         </div>
       </section>
 
