@@ -1,0 +1,337 @@
+---
+import customStyles from '../styles/custom.css?url';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'KilkaLabs OU',
+  url: 'https://kilkalabs.com',
+  logo: 'https://kilkalabs.com/images/logo.webp',
+  image: 'https://kilkalabs.com/images/logo.webp',
+  description: 'KilkaLabs creates cutting-edge mobile applications and UX/UI design services that help businesses and individuals thrive in a digital world.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tallinn',
+    addressCountry: 'EE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '59.437',
+    longitude: '24.7536',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Estonia',
+  },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'info@kilkalabs.com',
+      availableLanguage: ['English', 'Estonian'],
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'technical support',
+      email: 'support@kilkalabs.com',
+      availableLanguage: ['English', 'Estonian'],
+    },
+  ],
+  sameAs: ['https://github.com/kilkalabs'],
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>KilkaLabs OU - Mobile App Development &amp; UX/UI Design in Estonia</title>
+    <meta
+      name="description"
+      content="KilkaLabs OU creates innovative mobile applications and UX/UI design solutions in Tallinn, Estonia. Custom iOS and Android app development with exceptional user experiences."
+    />
+    <meta
+      name="keywords"
+      content="mobile app development, iOS development, Android development, UX UI design, Estonia, Tallinn, KilkaLabs, custom applications"
+    />
+    <meta name="author" content="KilkaLabs OU" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://kilkalabs.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="KilkaLabs OU - Mobile App Development &amp; UX/UI Design" />
+    <meta
+      property="og:description"
+      content="Building innovative mobile applications and UX/UI design solutions in Estonia. Custom iOS and Android development with exceptional user experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kilkalabs.com/" />
+    <meta property="og:site_name" content="KilkaLabs OU" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://kilkalabs.com/images/logo.webp" />
+    <meta property="og:image:alt" content="KilkaLabs - Mobile App Development &amp; UX/UI Design in Estonia" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="KilkaLabs OU - Mobile App Development &amp; UX/UI Design" />
+    <meta
+      name="twitter:description"
+      content="Building innovative mobile applications and UX/UI design solutions in Estonia."
+    />
+    <meta name="twitter:image" content="https://kilkalabs.com/images/logo.webp" />
+    <meta
+      name="twitter:image:alt"
+      content="KilkaLabs - Mobile App Development &amp; UX/UI Design in Estonia"
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1f2937" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/images/logo.webp" />
+
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+
+    <!-- Pico CSS - Minimal, semantic CSS framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href={customStyles} />
+  </head>
+
+  <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <div class="container">
+        <a href="/" class="logo">KilkaLabs</a>
+        <nav>
+          <a href="/">Home</a>
+          <div class="dropdown">
+            <button id="desktop-dropdown-button" class="dropdown-button" aria-haspopup="menu" aria-expanded="false">
+              Our Apps
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div id="desktop-dropdown-menu" class="dropdown-menu">
+              <a href="https://inthemood.kilkalabs.com" target="_blank" rel="noreferrer noopener">In The Mood</a>
+            </div>
+          </div>
+          <a href="#featured-app">Featured App</a>
+          <a href="#services">Services</a>
+          <a href="#support">Support</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button
+          id="mobile-menu-button"
+          class="mobile-menu-button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <svg
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="/">Home</a>
+        <div>
+          <button id="mobile-dropdown-button" aria-haspopup="menu" aria-expanded="false">Our Apps</button>
+          <div id="mobile-dropdown-menu" class="mobile-dropdown-menu">
+            <a href="https://inthemood.kilkalabs.com" target="_blank" rel="noreferrer noopener">In The Mood</a>
+          </div>
+        </div>
+        <a href="#featured-app">Featured App</a>
+        <a href="#services">Services</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-label="Hero section">
+        <div class="container">
+          <h1>Building innovative solutions for tomorrow's challenges</h1>
+          <p>
+            KilkaLabs creates cutting-edge mobile applications and UX/UI design services that help businesses and
+            individuals thrive in a digital world.
+          </p>
+          <a href="#contact" class="cta-button" aria-label="Contact KilkaLabs">Get in Touch</a>
+        </div>
+      </section>
+
+      <section id="featured-app" class="white-bg" aria-labelledby="featured-app-heading">
+        <div class="section-container">
+          <h2 id="featured-app-heading" class="section-heading">Featured App</h2>
+          <div class="app-showcase">
+            <div class="app-info">
+              <h3>In The Mood: Couples</h3>
+              <p>
+                In The Mood is the private app for couples who want to improve their relationship through better timing,
+                clearer signals, and deeper understanding. Whether you're navigating different moods or just too busy to
+                connect, In The Mood helps you stay emotionally close — without pressure or awkward conversations.
+              </p>
+              <div class="app-links">
+                <a
+                  href="https://inthemood.kilkalabs.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="app-website-link"
+                >
+                  Learn More
+                </a>
+                <a
+                  href="https://apps.apple.com/app/id6744419061"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="app-store-link"
+                  aria-label="Download on the App Store"
+                >
+                  <img
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1234567890"
+                    alt="Download on the App Store"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="app-preview">
+              <div class="app-mockup">
+                <img src="/images/in_the_mood_1.webp" alt="In The Mood app screenshot" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="white-bg" aria-labelledby="services-heading">
+        <div class="section-container">
+          <h2 id="services-heading" class="section-heading">Our Services</h2>
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>Mobile Application Development</h3>
+              <p>
+                Custom iOS and Android applications built with the latest technologies to meet your business needs and
+                provide exceptional user experiences. We specialize in native and cross-platform development.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>UX/UI Design</h3>
+              <p>
+                User-centered design that transforms complex requirements into intuitive, accessible, and visually
+                appealing interfaces. Our design process focuses on user research and usability testing.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="support" aria-labelledby="support-heading">
+        <div class="section-container">
+          <h2 id="support-heading" class="section-heading">Support</h2>
+          <div class="content-box">
+            <article class="faq-article">
+              <h3>How can I get help with my app?</h3>
+              <p>
+                Our support team is available via email at{' '}
+                <a href="mailto:support@kilkalabs.com" aria-label="Email support team">support@kilkalabs.com</a>. We
+                typically respond within 1-2 business days.
+              </p>
+            </article>
+            <article class="faq-article">
+              <h3>What information should I include when reporting an issue?</h3>
+              <p>
+                Please include the app name, version number, your device model and operating system version, and a
+                detailed description of the issue, including any error messages and steps to reproduce the problem.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="white-bg" aria-labelledby="contact-heading">
+        <div class="section-container">
+          <h2 id="contact-heading" class="section-heading">Contact Us</h2>
+          <div class="content-box contact-box">
+            <h3>Get in Touch</h3>
+            <p>
+              We're here to answer your questions and address your concerns. Please reach out to us using one of the
+              following email addresses:
+            </p>
+            <div class="contact-grid">
+              <div class="contact-item">
+                <h4>General Inquiries</h4>
+                <a href="mailto:info@kilkalabs.com" aria-label="Email for general inquiries">info@kilkalabs.com</a>
+              </div>
+              <div class="contact-item">
+                <h4>Technical Support</h4>
+                <a href="mailto:support@kilkalabs.com" aria-label="Email for technical support"
+                  >support@kilkalabs.com</a
+                >
+              </div>
+            </div>
+            <p class="contact-note">
+              When contacting us, please include relevant details about your inquiry to help us assist you more
+              efficiently. We aim to respond to all inquiries within 1-2 business days.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>KilkaLabs OU</h3>
+            <p>Building innovative solutions for tomorrow's challenges.</p>
+            <p>Tallinn, Estonia</p>
+          </div>
+          <div>
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#support">Support</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@kilkalabs.com">info@kilkalabs.com</a></p>
+            <p>Support: <a href="mailto:support@kilkalabs.com">support@kilkalabs.com</a></p>
+          </div>
+        </div>
+        <div class="footer-divider">
+          <p>&copy; <span id="copyright-year"></span> KilkaLabs OU. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="../scripts/main.js"></script>
+
+    <!-- Google Analytics - Loaded at end for performance -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R077NKJ12M" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-R077NKJ12M');
+    </script>
+  </body>
+</html>
