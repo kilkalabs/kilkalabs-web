@@ -87,5 +87,5 @@ Since this is a static site hosted on GitHub Pages:
 - **No build process required** - all changes are direct HTML/CSS/JS edits
 - Pico CSS provides base styling; custom components use semantic classes
 - Update `sitemap.xml` `<lastmod>` dates when making significant content changes
-- The site links to an external app: "In The Mood" at https://inthemood.kilkalabs.com
+- The site links to an external app: "In The Mood" at https://getinthemood.app/
 - JavaScript uses `.show` class pattern for visibility toggles (not `.hidden`)
