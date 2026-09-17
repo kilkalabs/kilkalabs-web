@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://kilkalabs.com/sitemap.xml
+Sitemap: https://kilkalabs.com/sitemap-index.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

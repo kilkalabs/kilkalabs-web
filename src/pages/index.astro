@@ -111,10 +111,6 @@ const structuredData = {
         <!-- Favicon -->
         <link rel="icon" type="image/webp" href="/images/logo.webp" />
 
-        <!-- Performance: Preconnect to external domains -->
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         <!-- Structured Data -->
         <script
@@ -122,11 +118,6 @@ const structuredData = {
             set:html={JSON.stringify(structuredData)}
         />
 
-        <!-- Pico CSS - Minimal, semantic CSS framework -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-        />
         <link rel="stylesheet" href={customStyles} />
     </head>
 
@@ -137,7 +128,7 @@ const structuredData = {
         <header>
             <div class="container">
                 <a href="/" class="logo">KilkaLabs</a>
-                <nav>
+                <nav aria-label="Primary navigation">
                     <a href="/">Home</a>
                     <div class="dropdown">
                         <button
@@ -241,7 +232,6 @@ const structuredData = {
                     <a
                         href="#contact"
                         class="cta-button"
-                        aria-label="Start a conversation with KilkaLabs"
                         >Start a conversation</a
                     >
                 </div>
@@ -287,6 +277,8 @@ const structuredData = {
                                     <img
                                         src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1234567890"
                                         alt="Download on the App Store"
+                                        width="133"
+                                        height="44"
                                         loading="lazy"
                                     />
                                 </a>
@@ -297,6 +289,8 @@ const structuredData = {
                                 <img
                                     src="/images/in_the_mood_1.webp"
                                     alt="In The Mood app screenshot"
+                                    width="1290"
+                                    height="2796"
                                     loading="lazy"
                                 />
                             </div>
@@ -351,7 +345,6 @@ const structuredData = {
                                 Our support team is available via email at{" "}
                                 <a
                                     href="mailto:support@kilkalabs.com"
-                                    aria-label="Email support team"
                                     >support@kilkalabs.com</a
                                 >. We typically respond within 1-2 business
                                 days.
@@ -395,7 +388,6 @@ const structuredData = {
                                 <h4>General Inquiries</h4>
                                 <a
                                     href="mailto:info@kilkalabs.com"
-                                    aria-label="Email for general inquiries"
                                     >info@kilkalabs.com</a
                                 >
                             </div>
@@ -403,7 +395,6 @@ const structuredData = {
                                 <h4>Technical Support</h4>
                                 <a
                                     href="mailto:support@kilkalabs.com"
-                                    aria-label="Email for technical support"
                                     >support@kilkalabs.com</a
                                 >
                             </div>
@@ -464,11 +455,6 @@ const structuredData = {
         <!-- Main JavaScript -->
         <script src="../scripts/main.js"></script>
 
-        <!-- Google Analytics - Loaded at end for performance -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-R077NKJ12M"
-            is:inline></script>
         <script is:inline>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -476,12 +462,19 @@ const structuredData = {
             }
             gtag("js", new Date());
             gtag("config", "G-R077NKJ12M");
+            // ponytail: tracks engaged visits; load immediately if bounce-rate data matters.
+            let analyticsLoaded = false;
+            const loadAnalytics = () => {
+                if (analyticsLoaded) return;
+                analyticsLoaded = true;
+                const script = document.createElement("script");
+                script.async = true;
+                script.src = "https://www.googletagmanager.com/gtag/js?id=G-R077NKJ12M";
+                document.head.append(script);
+            };
+            ["pointerdown", "keydown", "touchstart"].forEach((event) =>
+                window.addEventListener(event, loadAnalytics, { once: true, passive: true }),
+            );
         </script>
-
-        <script
-            async
-            src="https://analytics.ahrefs.com/analytics.js"
-            data-key="87XaKZ0lBlgMVL3sKGu21Q"
-            is:inline></script>
     </body>
 </html>
