@@ -1,5 +1,5 @@
 ---
-import customStyles from "../styles/custom.css?url";
+import customStyles from "../styles/custom.css?raw";
 
 const structuredData = {
     "@context": "https://schema.org",
@@ -118,7 +118,7 @@ const structuredData = {
             set:html={JSON.stringify(structuredData)}
         />
 
-        <link rel="stylesheet" href={customStyles} />
+        <style is:inline set:html={customStyles}></style>
     </head>
 
     <body>
@@ -232,7 +232,7 @@ const structuredData = {
                     <a
                         href="#contact"
                         class="cta-button"
-                        >Start a conversation</a
+                        >Contact KilkaLabs</a
                     >
                 </div>
             </section>
@@ -289,8 +289,8 @@ const structuredData = {
                                 <img
                                     src="/images/in_the_mood_1.webp"
                                     alt="In The Mood app screenshot"
-                                    width="1290"
-                                    height="2796"
+                                    width="620"
+                                    height="1344"
                                     loading="lazy"
                                 />
                             </div>
