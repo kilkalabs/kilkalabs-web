@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T19:00:00Z",
+  "title": "Design System: KilkaLabs",
+  "extensions": {
+    "shadows": [{"name":"phone-preview","value":"0 18px 35px rgb(29 36 65 / 13%)","purpose":"Letterwright screenshot only."}],
+    "motion": [{"name":"preview-lift","value":"transform 450ms cubic-bezier(.16, 1, .3, 1)","purpose":"Lift preview 5px on release hover or focus-within; disabled under reduced motion."}],
+    "breakpoints": [{"name":"compact","value":"900px"},{"name":"stacked","value":"640px"}]
+  },
+  "components": [
+    {
+      "name":"Website action", "kind":"button", "refersTo":"button-primary", "description":"Primary link to an app website.",
+      "html":"<a class=\"ds-button\" href=\"#\">Visit website <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "css":".ds-button{display:inline-flex;align-items:center;gap:1.8rem;min-height:50px;padding:.8rem 1.1rem;background:var(--blue,#243dab);color:white;border:1px solid transparent;border-radius:4px;font:600 16px/1.6 sans-serif;text-decoration:none}.ds-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ds-button:hover{background:var(--ink,#1d2441)}.ds-button:active{box-shadow:inset 0 0 0 2px currentColor}.ds-button:focus-visible{outline:3px solid currentColor;outline-offset:6px}"
+    },
+    {
+      "name":"Inverse website action", "kind":"button", "refersTo":"button-inverse", "description":"Primary action on cobalt.",
+      "html":"<div class=\"ds-field\"><a class=\"ds-inverse\" href=\"#\">Visit website <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a></div>",
+      "css":".ds-field{padding:24px;background:var(--blue,#243dab)}.ds-inverse{display:inline-flex;align-items:center;gap:1.8rem;min-height:50px;padding:.8rem 1.1rem;background:white;color:var(--blue,#243dab);border:1px solid transparent;border-radius:4px;font:600 16px/1.6 sans-serif;text-decoration:none}.ds-inverse svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}.ds-inverse:hover{background:var(--pale,#e4eaff)}.ds-inverse:active{box-shadow:inset 0 0 0 2px currentColor}.ds-inverse:focus-visible{outline:3px solid white;outline-offset:6px}"
+    },
+    {
+      "name":"Download link", "kind":"custom", "description":"Secondary direct download action.",
+      "html":"<a class=\"ds-download\" href=\"#\">Get it for iPhone</a>",
+      "css":".ds-download{display:inline-flex;align-items:center;min-height:44px;font:600 .9rem/1.6 sans-serif;color:var(--ink,#1d2441);text-underline-offset:.3em}.ds-download:hover{ text-decoration-thickness:2px}.ds-download:active{text-decoration-thickness:3px}.ds-download:focus-visible{outline:3px solid currentColor;outline-offset:6px}"
+    },
+    {
+      "name":"Availability", "kind":"chip", "description":"Informational release status, not an action.",
+      "html":"<span class=\"ds-status\">Coming soon for Mac</span>",
+      "css":".ds-status{display:inline-block;padding:.45rem .85rem;border:1px solid var(--line,#c6cde4);border-radius:3px;color:var(--blue,#243dab);font:.85rem/1.6 sans-serif}"
+    },
+    {
+      "name":"Navigation", "kind":"nav", "description":"Direct navigation, including on phones.",
+      "html":"<nav class=\"ds-nav\" aria-label=\"Preview navigation\"><a href=\"#apps\">Our apps</a><a href=\"#support\">Support</a></nav>",
+      "css":".ds-nav{display:flex;gap:2rem}.ds-nav a{padding:.65rem 0;font:600 16px/1.6 sans-serif;color:var(--ink,#1d2441);text-decoration:none;text-underline-offset:.3em}.ds-nav a:hover{color:var(--blue,#243dab);text-decoration:underline}.ds-nav a:active{text-decoration:underline;text-decoration-thickness:3px}.ds-nav a:focus-visible{outline:3px solid currentColor;outline-offset:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar":"Independent Software Editions",
+    "overview":"Bold maker typography and broad color fields frame the apps themselves. Product imagery supplies detail; the surrounding interface is flat, direct, and unornamented.",
+    "keyCharacteristics":["Large, self-hosted display lettering.","Cobalt and periwinkle release fields.","Real app previews with plainly labeled actions."],
+    "rules":[],
+    "dos":["Do let app imagery supply the detail.","Do use contrasting inverse actions on cobalt.","Do keep navigation and downloads usable without JavaScript."],
+    "donts":["Don't turn every release into an identical bordered card.","Don't introduce owner portraits or personal attribution; use Made by KilkaLabs."]
+  }
+}
